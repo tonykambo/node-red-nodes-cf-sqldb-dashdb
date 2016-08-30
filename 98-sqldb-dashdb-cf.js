@@ -17,7 +17,7 @@ module.exports = function(RED) {
 
     var cfEnv = require("cfenv");
     var appEnv = cfEnv.getAppEnv();
-    var debugLocal = false;
+    var debugLocal = true;
     var SQLDBservices = [];
     var dashDBservices = [];
 
@@ -159,11 +159,11 @@ module.exports = function(RED) {
         // This is for debugging locally
         else {
            db2 = {
-              db: "TESTDB",
-              hostname: "localhost",
-              port: 50000,
-              username: "db2admin",
-              password: "yourpassword"
+			   db: "BLUDB",
+			   hostname: "dashdb-entry-yp-syd01-01.services.au-syd.bluemix.net",
+			   port: 50000,
+			   username: "dash100049",
+			   password: "b187w006VnqM"
            };
         }
 
@@ -462,11 +462,11 @@ function dashDBQueryNode(n) {
         // This is for debugging locally
         else {
            db2 = {
-           db: "TESTDB",
-           hostname: "localhost",
+           db: "BLUDB",
+           hostname: "dashdb-entry-yp-syd01-01.services.au-syd.bluemix.net",
            port: 50000,
-           username: "db2admin",
-           password: "yourpassword"
+           username: "dash100049",
+           password: "b187w006VnqM"
            };
         }
 
