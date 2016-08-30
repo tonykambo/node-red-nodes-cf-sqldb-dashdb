@@ -445,10 +445,10 @@ function dashDBQueryNode(n) {
         var params          = n.params;
         var dashDBconfig    = appEnv.getService(n.service);
 
-        if (!dashDBconfig) {
-           this.error("dashDB query node configuration error: service not defined");
-           return;
-        }
+//         if (!dashDBconfig) {
+//            this.error("dashDB query node configuration error: service not defined");
+//            return;
+//         }
 
         var node = this;
         var db2 = {};
